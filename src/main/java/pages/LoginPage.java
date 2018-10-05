@@ -33,4 +33,9 @@ public class LoginPage extends BasePage {
     public void visit(){
         navigateTo("http://automationpractice.com/index.php?controller=authentication&back=my-account");
     }
+
+    public void clickForgotPasswordLink() {
+        clickOn(By.linkText("Forgot your password?"));
+        waitForDocumentCompleteState();
+    }
 }

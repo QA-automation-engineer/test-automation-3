@@ -52,7 +52,8 @@ public abstract class BaseGUITest extends SimpleAPI {
                 if (Boolean.parseBoolean(System.getProperty("isRemote"))){
                     DesiredCapabilities caps = DesiredCapabilities.chrome();
                     try {
-                        webDriver = new RemoteWebDriver(new URL("http://172.17.0.2:4444/wd/hub"), caps);
+                        String domain = System.getProperty("selenium.url");
+                        webDriver = new RemoteWebDriver(new URL("http://" + domain + ":4444/wd/hub"), caps);
                     } catch (MalformedURLException e) {
                         e.printStackTrace();
                     }

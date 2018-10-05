@@ -26,6 +26,16 @@ public class LoginTests extends BaseGUITest {
     }
 
     @Test
+    public void Verify_That_Forgot_Password_Page_Can_Be_Opened(){
+        // act
+        loginPage.clickForgotPasswordLink();
+        // assert
+        Assert.assertThat(
+                getPageTitle(),
+                containsString("Forgot your password"));
+    }
+
+    @Test
     public void Verify_That_User_Can_Login_Into_Private_Cabinet(){
         // act
         loginPage.login();
