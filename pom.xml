@@ -74,6 +74,7 @@
                         <report.path>./reports/build-${timestamp}</report.path>
                         <isRemote>false</isRemote>
                         <selenium.url>127.0.0.1</selenium.url>
+                        <browser>Chrome</browser>
                     </systemPropertyVariables>
                 </configuration>
                 <dependencies>
