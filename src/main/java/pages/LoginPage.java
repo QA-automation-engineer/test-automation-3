@@ -37,5 +37,6 @@ public class LoginPage extends BasePage {
     public void clickForgotPasswordLink() {
         clickOn(By.linkText("Forgot your password?"));
         waitForDocumentCompleteState();
+
     }
 }
